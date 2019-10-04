@@ -5,7 +5,7 @@
 # humidity sensor.
 # LoRa packets are coming via EnCo SEaaS (Sensor as a Service)
 #
-# The payloads are encoded according to Cayenne Low Power PAyload format (LPP)
+# The payloads are encoded according to Cayenne Low Power Payload format (LPP)
 # See https://mydevices.com/cayenne/docs/lora/#lora-cayenne-low-power-payload
 #
 #--------------------------------------------------------------------------
@@ -21,12 +21,6 @@ object combinedData = [];
 
 # Entrypoint
 function run(object data, object tags, string asset) {
-
-    # LORA input
-    if( (array.containsAll(tags, ["LORA", "DEVEUIOFYOURDEVICE"])) && asset == "seaas" ) {
-        # Fields
-        combinedData["PAYLOAD"] = data["PAYLOAD"];
-    }
 
     # Store received payload, output in hex to log
     object payload = data["PAYLOAD"];

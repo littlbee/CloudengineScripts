@@ -5,13 +5,13 @@
 # In the CloE setting screen / Configuration Store: 
 # 1)Create a new element called "rtcmStreamPlanning" 
 #   Upload in this element a text file with your streams. Format of the file is:
-#   zoneName;targetType(HTTP/CLOE);targetSpecs(URL/CLoE tag)
+#   zoneName;targetType("HTTP" or "CLOE");targetSpecs("Your_URL" or "Your_CLoE tag")
 #   Examples:
 #       BXLCenter;HTTP;https://some.httpendpoint.org
 #       GSK;CLOE;MYTAG1
 #       Mons;HTTP;https://another.httpendpoint.org
 #       OLLN-ALL;CLOE;MYTAG2
-# 2)Create a new element called "encotoken", and store one of your permament EnCo Bearer token in it
+# 2)Create a new element called "encotoken", and store one of your permament API Solutions Bearer token in it
 #
 # Do not forget to include CRON as your input endpoint and assign it your desired schedule
 
